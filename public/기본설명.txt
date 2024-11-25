@@ -10,24 +10,21 @@
 
 	export default calcStore;
 
-    주의할 점:
-			create( 무명함수 ) 형태이다.
-			create( (){} )
+    설명:
+			zustand 로부터 받은 create함수는, 새로운 함수를 만들어서 반환한다.
+			위에서 새로 만든 함수를 calcStore 변수에 할당하였다.
+			그러므로  calcStore  역시 함수이다.
+			그래서 나중에 사용할 때 calcStore() 식으로 실행을 한다.
+			그런데 이 함수는 객체{}를 반환하는 함수이다.
+			그래서 calcStore를 나중에 실행하면, 객체를 반환하는데, 그것이 정의한 스토어 안에 있는 state값과 메소드이다.
 
-			그런데,
 			(set,get) {} 하면 일반 함수정의
 	        (set,get) { return {} } 하면 객체({})를 반환하는 함수
 
-			간단히
+			간단히 에로우함수로 표현하면
 			(set,get) => ({})
 
-	즉, create함수는 
-	set, get이라는 매개변수를 전달하고, 객체를 반환하는 함수를 만든다.
-	set,get은 zustand에서 관리하는 메소드인데, 사용법은 실제 프로젝트를 보면 알게 됩니다.
-
-	또 중요한 것은 create함수는 함수를 만들어서 반환하는 것이다.
-	const calcStore = create( (set,get)=> ({}) )
-	결국 calcStore는 함수이다. 그래서 calcStore() 식으로 실행한다.
+	
 
 
 3. 지금 프로젝트 링크
