@@ -7,7 +7,7 @@ const calcStore = create((set, get)=>({
 	setCount: (val) => set({count: val}),
 	increaseCount: () => set({count: get().count +1}),
 	decreaseCount: () => set({count: get().count -1}),
-	multipleCount: (val) => set({count: get().count * val}),
+	multipleCount: (val) => set((state)=> ({count: state.count * val})),
 	initializeCount: ()=> set({count: 0}),
 	addCount: (val) => set({count: get().count + val})
 }))
