@@ -1,7 +1,7 @@
 import calcStore from './store/calcStore'
 
 function App() {
-  const {count, increaseCount, decreaseCount, addCount, initializeCount} = calcStore();
+  const {count, 메시지, increaseCount, decreaseCount, addCount, initializeCount} = calcStore();
 
   function increaseTen(){
     addCount(10);
@@ -10,6 +10,7 @@ function App() {
   return (
     <div>
       <div>count: {count}</div>
+      <div>메시지: {메시지}</div>
       <button onClick={increaseCount}>1씩증가</button>
       <button onClick={decreaseCount}>1씩감소</button>
       <button onClick={increaseTen}>10씩증가</button>
