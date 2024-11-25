@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import calcStore from './store/calcStore'
 
 function App() {
+  const {count, increaseCount, decreaseCount, addCount, initializeCount} = calcStore();
+
+  function increaseTen(){
+    addCount(10);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>count: {count}</div>
+      <button onClick={increaseCount}>1씩증가</button>
+      <button onClick={decreaseCount}>1씩감소</button>
+      <button onClick={increaseTen}>10씩증가</button>
+      <button onClick={initializeCount}>초기화</button>
     </div>
   );
 }
