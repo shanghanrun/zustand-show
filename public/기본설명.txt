@@ -30,7 +30,8 @@
 	결국 calcStore는 함수이다. 그래서 calcStore() 식으로 실행한다.
 
 
-3. 
+3. 지금 프로젝트 링크
+https://github.com/shanghanrun/zustand-show/tree/main/public
 
 4. 기타 알아두면 좋은 내용은 다음 노션링크를 참고
 https://stormy-bumper-d80.notion.site/zustand-1-149f332cb67f80d2987efda1eb94ee71?pvs=4
