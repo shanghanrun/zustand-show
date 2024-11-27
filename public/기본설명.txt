@@ -3,20 +3,20 @@
 	cd zustand-show
 	npm i zustand
 
-2. store 폴더에 calcStore.js 만들기
+2. store 폴더에 countStore.js 만들기
 
 	import {create} from 'zustand'
-	const calcStore = create( (set,get)=> ({}) )
+	const countStore = create( (set,get)=> ({}) )
 
-	export default calcStore;
+	export default countStore;
 
     설명:
 			zustand 로부터 받은 create함수는, 새로운 함수를 만들어서 반환한다.
-			위에서 새로 만든 함수를 calcStore 변수에 할당하였다.
-			그러므로  calcStore  역시 함수이다.
-			그래서 나중에 사용할 때 calcStore() 식으로 실행을 한다.
+			위에서 새로 만든 함수를 countStore 변수에 할당하였다.
+			그러므로  countStore  역시 함수이다.
+			그래서 나중에 사용할 때 countStore() 식으로 실행을 한다.
 			그런데 이 함수는 객체{}를 반환하는 함수이다.
-			그래서 calcStore를 나중에 실행하면, 객체를 반환하는데, 그것이 정의한 스토어 안에 있는 state값과 메소드이다.
+			그래서 countStore를 나중에 실행하면, 객체를 반환하는데, 그것이 정의한 스토어 안에 있는 state값과 메소드이다.
 
 			(set,get) {} 하면 일반 함수정의
 	        (set,get) { return {} } 하면 객체({})를 반환하는 함수
