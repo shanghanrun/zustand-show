@@ -1,6 +1,5 @@
 import countStore from './store/countStore'
-import StoreExample from './StoreExample'
-
+import State2Example from './State2Example'
 
 function App() {
   
@@ -14,8 +13,10 @@ function App() {
       <button onClick={decreaseCount}>1씩감소</button>  
       <button onClick={initializeCount}>초기화</button>
       <button onClick={()=>addCount(10)}>10씩증가</button>
-      <div>------</div>
-      <StoreExample />      
+      <div>-----------------------------</div>
+      <div>useState2 Example</div>
+      <div>-----------------------------</div>
+      <State2Example />      
     </div>
   );
 }
